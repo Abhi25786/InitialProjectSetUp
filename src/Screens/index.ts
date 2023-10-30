@@ -1,0 +1,7 @@
+export {default as Login}  from './Auth/Login/Login'
+export {default as SignUp}  from './Auth/SignUp/SignUp'
+export {default as Home}  from './Main/Home/Home'
+export {default as Search}  from './Main/Search/Search'
+export {default as CreatePost}  from './Main/CreatePost/CreatePost'
+export {default as Notification}  from './Main/Notification/Notification'
+export {default as Profile}  from './Main/Profile/Profile'
