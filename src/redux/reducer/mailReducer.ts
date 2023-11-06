@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface CounterState {
     primaryFontFamily: object
+    primaryLanguage:string
 }
 const initialState: CounterState = {
     primaryFontFamily:    {
@@ -12,6 +13,7 @@ const initialState: CounterState = {
         medium: 'Inter-Medium',
         regular: 'Inter-Regular'
     },
+    primaryLanguage:'en'
 }
 const authReducer = createSlice({
     initialState,
@@ -19,8 +21,11 @@ const authReducer = createSlice({
     reducers: {
         setPrimaryFont: (state, payload) => {
             state.primaryFontFamily = payload.payload
+        },
+        primaryLanguage: (state, payload) => {
+            state.primaryLanguage = payload.payload
         }
     }
 })
-export const { setPrimaryFont } = authReducer.actions
+export const { setPrimaryFont,primaryLanguage } = authReducer.actions
 export default authReducer.reducer

@@ -11,7 +11,8 @@ export interface fontFamilyobject {
     regular:string
 }
 export interface mainInterface {
-    primaryFontFamily:fontFamilyobject
+    primaryFontFamily:fontFamilyobject,
+    primaryLanguage:string
 }
 export interface allReducer {
     auth:authInerface

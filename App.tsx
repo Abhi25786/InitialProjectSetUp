@@ -17,7 +17,7 @@ const App = () => {
       // check primary lang
       const primaryTranslation = await getItem('primaryTranslation') as string
       if(!!primaryTranslation){
-        i18next.changeLanguage(primaryTranslation);
+        actions.changePrimaryTranslation(primaryTranslation)
       }else{
         i18next.changeLanguage('en');
       }
