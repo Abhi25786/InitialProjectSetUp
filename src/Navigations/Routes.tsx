@@ -9,15 +9,11 @@ import MainStack from './MainStack'
 
 const Routes = () => {
   const { userData } = useSelector((state: allReducer) => state?.auth)
-  const  {primaryFontFamily,primaryLanguage} = useSelector((state:allReducer)=>state?.main || {});
+  const  primaryFontFamily = useSelector((state:allReducer)=>state?.main?.primaryFontFamily)
 
   return (
     <NavigationContainer>
-      {!!userData?.authToken 
-      ? 
-      MainStack(primaryFontFamily,primaryLanguage)
-       : AuthStack(primaryFontFamily)
-       }
+      {!!userData?.authToken ? MainStack(primaryFontFamily) : AuthStack(primaryFontFamily)}
     </NavigationContainer>
   )
 }
